@@ -1,0 +1,43 @@
+body {
+    /* center calculator in the middle of the screen */
+    display: flex;
+    justify-content: center;
+}
+.calculator {
+    background-color: gray;
+    position: absolute;
+    padding: 20px;
+}
+
+.input {
+    background-color: #a6fc90;
+    padding: 20px;
+    margin: 10px;
+}
+
+button {
+    border: none;
+    font-size: 2.5rem;
+    padding: 20px;
+    margin: 10px;
+    /* change font family */
+    font-family: sans-serif;
+    width: 200px;
+    height: 100px;
+}
+
+.numbers {
+    background-color: black;
+    color: white;
+    
+}
+
+.operation {
+    background-color: white;
+}
+
+.equal {
+    width: 870px;
+    background-color: #f59da1;
+    
+}
