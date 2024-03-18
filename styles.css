@@ -1,3 +1,4 @@
+/* Style needs to be adjusted more */
 body {
     /* center calculator in the middle of the screen */
     display: flex;
@@ -10,9 +11,21 @@ body {
 }
 
 .input {
+    display: inline-block;
     background-color: #a6fc90;
     padding: 20px;
-    margin: 10px;
+    margin: 10px 0 10px 0;
+    height: 60px;
+    width: 600px;
+    font-size: 2.5rem;
+}
+
+.clear {
+    display: inline-block;
+    background-color: yellow;
+    
+    margin: 10px 10px 0 10px;
+    padding: 10px;
 }
 
 button {
@@ -29,7 +42,6 @@ button {
 .numbers {
     background-color: black;
     color: white;
-    
 }
 
 .operation {
