@@ -9,10 +9,10 @@ for (var i = 0; i < numberOfNumButtons; i++)
 {
     document.querySelectorAll(".numbers")[i].addEventListener('click', function () {
         var buttonInnerHTML = this.innerHTML;
-        if (document.querySelector(".input").textContent === " Enter number ")
+        if (document.querySelector("input").value === " Enter number ")
         {
             // Will always be first operand, at the beginning
-            document.querySelector(".input").textContent = buttonInnerHTML;
+            document.querySelector("input").value = buttonInnerHTML;
             n1 = buttonInnerHTML;
         }
         else
@@ -21,16 +21,16 @@ for (var i = 0; i < numberOfNumButtons; i++)
             if(n1_end === true)
             {
                 // If n1 ended and currently on n2
-                if(document.querySelector(".input").textContent === "")
+                if(document.querySelector("input").value === "")
                 {
                     // If starting n2
-                    document.querySelector(".input").textContent = buttonInnerHTML;
+                    document.querySelector("input").value = buttonInnerHTML;
                     n2 = buttonInnerHTML;
                 }
                 else
                 {
                     // Add digits for n2
-                    document.querySelector(".input").textContent += buttonInnerHTML;
+                    document.querySelector("input").value += buttonInnerHTML;
                     n2 = n2.concat(buttonInnerHTML);
                 }
 
@@ -38,7 +38,7 @@ for (var i = 0; i < numberOfNumButtons; i++)
             else
             {
                 // Add digits to n1 if it has not ended
-                document.querySelector(".input").textContent += buttonInnerHTML;
+                document.querySelector("input").value += buttonInnerHTML;
                 n1 = n1.concat(buttonInnerHTML);
             }
             
@@ -64,9 +64,6 @@ function Calculation(n1, n2) {
             result = n1 / n2;
             break;
     }
-    console.log(n1);
-    console.log(n2);
-    console.log(result);
     return result;
 }
 
@@ -78,19 +75,19 @@ for (var i = 0; i < numberOperationButtons; i++)
         // Set global variable to be the current operation and prepare for n2
         op = this.innerHTML;
         n1_end = true;
-        document.querySelector(".input").textContent = "";
+        document.querySelector("input").value = "";
         
     });
 }
 
 // Equal case
 document.querySelector(".equal").addEventListener('click', function() {
-    document.querySelector(".input").textContent = Calculation(Number(n1), Number(n2)).toString();
+    document.querySelector("input").value = Calculation(Number(n1), Number(n2)).toString();
 });
 
 // Clear case
 document.querySelector(".clear").addEventListener('click', function() {
-    document.querySelector(".input").textContent = " Enter number ";
+    document.querySelector("input").value = "";
     n1 = "";
     n2 = "";
     op = "";
