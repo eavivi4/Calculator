@@ -9,15 +9,9 @@ for (var i = 0; i < numberOfNumButtons; i++)
 {
     document.querySelectorAll(".numbers")[i].addEventListener('click', function () {
         var buttonInnerHTML = this.innerHTML;
-        if (document.querySelector("input").value === " Enter number ")
+        // Change into the number typed, depending on which operand is the current one (n1 or n2)
+        if (buttonInnerHTML != "(-)")
         {
-            // Will always be first operand, at the beginning
-            document.querySelector("input").value = buttonInnerHTML;
-            n1 = buttonInnerHTML;
-        }
-        else
-        {
-            // Change into the number typed, depending on which operand is the current one (n1 or n2)
             if(n1_end === true)
             {
                 // If n1 ended and currently on n2
@@ -41,8 +35,8 @@ for (var i = 0; i < numberOfNumButtons; i++)
                 document.querySelector("input").value += buttonInnerHTML;
                 n1 = n1.concat(buttonInnerHTML);
             }
-            
         }
+        
         
     });
 }
@@ -92,4 +86,17 @@ document.querySelector(".clear").addEventListener('click', function() {
     n2 = "";
     op = "";
     n1_end = false;
+});
+
+document.querySelector(".negative").addEventListener('click', function() {
+    if (n1_end === true)
+    {
+        n2 *= -1;
+        document.querySelector("input").value = n2;
+    }
+    else
+    {
+        n1 *= -1;
+        document.querySelector("input").value = n1;
+    }
 });
