@@ -9,33 +9,33 @@
     <body>
         <div class="calculator">
             <div>
-                <input type="text" placeholder="Enter number">
+                <input type="text" placeholder="Enter number" disabled>
                 <button class="clear">C</button>
             </div>
             
             <div class="number-row">
-                <button class="numbers">7</button>
-                <button class="numbers">8</button>
-                <button class="numbers">9</button>
-                <button class="operation">+</button>
+                <button class="numbers" onclick="display('7')">7</button>
+                <button class="numbers" onclick="display('8')">8</button>
+                <button class="numbers" onclick="display('9')">9</button>
+                <button class="operation" onclick="display('+')">+</button>
             </div>
             <div class="number-row">
-                <button class="numbers">4</button>
-                <button class="numbers">5</button>
-                <button class="numbers">6</button>
-                <button class="operation">-</button>
+                <button class="numbers" onclick="display('4')">4</button>
+                <button class="numbers" onclick="display('5')">5</button>
+                <button class="numbers" onclick="display('6')">6</button>
+                <button class="operation" onclick="display('-')">-</button>
             </div>
             <div class = "number-row">
-                <button class="numbers">1</button>
-                <button class="numbers">2</button>
-                <button class="numbers">3</button>
-                <button class="operation">x</button>
+                <button class="numbers" onclick="display('1')">1</button>
+                <button class="numbers" onclick="display('2')">2</button>
+                <button class="numbers" onclick="display('3')">3</button>
+                <button class="operation" onclick="display('*')">*</button>
             </div>
             <div class = "number-row">
-                <button class="numbers">0</button>
-                <button class="numbers dot">.</button>
+                <button class="numbers" onclick="display('0')">0</button>
+                <button class="numbers dot" onclick="display('.')">.</button>
                 <button class="numbers negative">(-)</button>
-                <button class="operation">:</button>
+                <button class="operation" onclick="display('/')">/</button>
             </div>
             <button class="equal">=</button>
         </div>
