@@ -18,10 +18,18 @@ document.querySelector(".clear").addEventListener('click', function() {
     document.querySelector("input").value = "";
 });
 
-document.querySelector(".negative").addEventListener('click', function() {
-    var curr = document.querySelector("input").value;
-    console.log(curr);
-    var result = curr * -1;
-    console.log(result);
-    document.querySelector("input").value = result;
-});
+// Parenthesis
+var par = false;
+function checkPar()
+{
+    if (par === false)
+    {
+        document.querySelector("input").value += '(';
+        par = true;
+    }
+    else
+    {
+        document.querySelector("input").value += ')';
+        par = false;
+    }
+}
