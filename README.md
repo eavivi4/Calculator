@@ -5,7 +5,7 @@
 - Subtraction
 - Multiplication
 - Division
-- Parentheses
+- Mod
 - Clear
 
 ![image info](Calculator.jpg)
