@@ -17,19 +17,3 @@ document.querySelector(".equal").addEventListener('click', function() {
 document.querySelector(".clear").addEventListener('click', function() {
     document.querySelector("input").value = "";
 });
-
-// Parenthesis
-var par = false;
-function checkPar()
-{
-    if (par === false)
-    {
-        document.querySelector("input").value += '(';
-        par = true;
-    }
-    else
-    {
-        document.querySelector("input").value += ')';
-        par = false;
-    }
-}
